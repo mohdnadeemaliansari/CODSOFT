@@ -1,0 +1,42 @@
+# Here we can define a function for each arithmetic operation
+
+def add(x, y):
+    return x + y
+
+def sub(x, y):
+    return x - y
+ 
+def mul(x, y):
+    return x * y
+
+def div(x, y):
+    if y == 0:
+        raise ValueError("Cannot divide by zero!")
+    return x / y
+
+# Define a main function to handle user input and calculation
+def calculator():
+    # Prompt user to input two numbers
+    num1 = float(input("Enter the first number: "))
+    num2 = float(input("Enter the second number: "))
+
+    # Prompt user to input an operation choice
+    operation = input("Enter an operation (+, -, *, /): ")
+
+    # Perform the calculation based on the operation choice
+    if operation == "+":
+        result = add(num1, num2)
+    elif operation == "-":
+        result = sub(num1, num2)
+    elif operation == "*":
+        result = mul(num1, num2)
+    elif operation == "/":
+        result = div(num1, num2)
+    else:
+        raise ValueError("Invalid operation choice!")
+
+    # Display the result
+    print("Result:", result)
+
+# Call the main function
+calculator()
